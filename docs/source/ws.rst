@@ -102,7 +102,7 @@ Asset Service
 Add Asset
 ^^^^^^^^^^^^
 
-.. csv-table:: **Usage**
+.. csv-table:: **addRackEquipment**
     :header: Arguments, Value
     :widths: 40,60
 
@@ -124,6 +124,61 @@ Add Asset
         }
         return (String) res[0];
     }
+
+
+
+Update Asset
+^^^^^^^^^^^^^^
+
+.. csv-table:: **updateRackEquipment**
+    :header: Arguments, Value
+    :widths: 40,60
+
+    URL, "http://localhost:8080/uinv_dev/services/DataStream?wsdl"
+    Function Name,updateRackEquipment
+    Input Parameter, data in JSON format
+
+
+.. code-block:: java
+    :linenos:
+
+    public static void main(String[] args) {
+        String pushData= "{\"type\":\"rackDevice\",\"BizID\":\"FX10023100234\",\"Name\" : \"FX10023100234\",\"belongTo\" : \"P310-E-08\", \"location\" : \"\",\"deviceType\" : \"IBM System x3650\",\"site\":\"12-13\",\"ID\": \"IBM System x3650\", \"CabinetID\": \"\", \"Name\": \"FX10023100234\"}";
+        Object[] res = null;
+        try {
+            res = client.invoke("updateRackEquipment", pushData);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return (String) res[0];
+    }
+
+
+Delete Asset
+^^^^^^^^^^^^^^
+
+.. csv-table:: **deleteRackEquipment**
+    :header: Arguments, Value
+    :widths: 40,60
+
+    URL, "http://localhost:8080/uinv_dev/services/DataStream?wsdl"
+    Function Name,deleteRackEquipment
+    Input Parameter, data in JSON format
+
+.. code-block:: java
+    :linenos:
+
+    public static void main(String[] args) {
+        String pushData= "[\"FX10023100234\",\"FX10023100244\"]";
+        Object[] res = null;
+        try {
+            res = client.invoke("deleteRackEquipment", pushData);
+        } catch (Exception e) {
+            e.printStackTrace();
+    }
+        return (String) res[0];
+    }
+
 
 
 
