@@ -46,7 +46,7 @@ asset
           "_id_":"dtz",
           "_data_":{  
              "ID":"dtz",
-             "Name":"VM-DB2",
+             "name":"VM-DB2",
              "belongTo":"P311-A1-01",
              "CPU":"4",
              "Memory":"4096111M",
