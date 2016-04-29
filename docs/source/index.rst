@@ -3,13 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to uDCV API Doc's documentation!
+Welcome to uDCV Developer Guide
 ========================================
 
 Introduce
 ==========
 
-This documentation discuss uDCV API, the following topic are included:
+This documentation provides guidelines on interact with uDCV thought API, the following API topic are included:
 
   * :ref:`API Concepts <api-concepts-label>`
   * :ref:`Command line API <api-cmd-label>`
